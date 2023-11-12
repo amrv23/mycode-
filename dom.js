@@ -48,6 +48,11 @@ document.body.addEventListener('click', function(event)
         display.value = displayText
     }
 
+    else if(event.target.classList.contains('percentage')){
+        displayText = displayText/100
+        display.value = displayText
+    }
+
     else if(event.target.classList.contains('DEL')){
         displayText = displayText.slice(0,-1)
         display.value = displayText
