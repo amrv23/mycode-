@@ -61,7 +61,7 @@ document.body.addEventListener('click', function(event)
 
     else if(event.target.classList.contains('equals')){
 
-        if(displayText.includes("𝝅") || displayText.includes("*𝝅")){
+        if(displayText.includes("𝝅") || displayText.includes("*𝝅") || displayText.includes("𝝅*")){
 
             if(displayText == "𝝅"){
                 displayText = "3.14159265359"
@@ -71,8 +71,8 @@ document.body.addEventListener('click', function(event)
 
             else{
                 displayText = displayText.replace("*𝝅","*3.14159265359")
-                displayText = displayText.replace("𝝅","*3.14159265359")
-            
+                displayText = displayText.replace("𝝅*","3.14159265359*")
+                /*displayText = displayText.replace("𝝅","*3.14159265359")*/
                 displayText = eval(displayText)
                 display.value = displayText
 
@@ -80,7 +80,7 @@ document.body.addEventListener('click', function(event)
 
         }
 
-        else if(displayText.includes("e") || displayText.includes("*e")){
+        else if(displayText.includes("e") || displayText.includes("*e") || displayText.includes("e*") ){
 
             if(displayText == "e"){
                 displayText = "2.718281828490"
@@ -90,7 +90,8 @@ document.body.addEventListener('click', function(event)
 
             else{
                 displayText = displayText.replace("*e","*2.718281828490")
-                displayText = displayText.replace("e","*2.718281828490")
+                displayText = displayText.replace("e*","2.718281828490*")
+                /*displayText = displayText.replace("e","*2.718281828490")*/
             
                 displayText = eval(displayText)
                 display.value = displayText
