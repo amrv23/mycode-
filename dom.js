@@ -38,7 +38,7 @@ numbers[9].addEventListener('click', numClicked(numbers[9]));*/
 
 document.body.addEventListener('click', function(event)
 {
-    if(event.target.classList.contains('numbers') || event.target.classList.contains('operator')){
+    if(event.target.classList.contains('numbers') || event.target.classList.contains('operator') || event.target.classList.contains('constant')){
     displayText+=event.target.textContent
     display.value = displayText
     }
@@ -60,14 +60,113 @@ document.body.addEventListener('click', function(event)
     }
 
     else if(event.target.classList.contains('equals')){
+
+        if(displayText.includes("𝝅") || displayText.includes("*𝝅")){
+
+            if(displayText == "𝝅"){
+                displayText = "3.14159265359"
+                display.value = displayText
+                
+            }
+
+            else{
+                displayText = displayText.replace("*𝝅","*3.14159265359")
+                displayText = displayText.replace("𝝅","*3.14159265359")
+            
+                displayText = eval(displayText)
+                display.value = displayText
+
+            }
+
+        }
+
+        else if(displayText.includes("e") || displayText.includes("*e")){
+
+            if(displayText == "e"){
+                displayText = "2.718281828490"
+                display.value = displayText
+                
+            }
+
+            else{
+                displayText = displayText.replace("*e","*2.718281828490")
+                displayText = displayText.replace("e","*2.718281828490")
+            
+                displayText = eval(displayText)
+                display.value = displayText
+
+            }
+
+        }
+        else{
         displayText = eval(displayText)
+        display.value = displayText
+
+        }
+
+        }
+
+    else if(event.target.classList.contains('square')){
+
+        
+        displayText = (eval(displayText))**2
         display.value = displayText
 
     }
 
+    else if(event.target.classList.contains('root')){
+        displayText = (eval(displayText))**(0.5)
+        display.value = displayText
+
+    }
+
+
+    /*function equalTo(){
+
+        if(displayText.includes("𝝅") || displayText.includes("*𝝅")){
+
+            if(displayText == "𝝅"){
+                displayText = "3.14159265359"
+                display.value = displayText
+                
+            }
+
+            else{
+                displayText = displayText.replace("*𝝅","*3.14159265359")
+                displayText = displayText.replace("𝝅","*3.14159265359")
+            
+                displayText = eval(displayText)
+                display.value = displayText
+
+            }
+
+        }*/
+
+        else if(displayText.includes("e") || displayText.includes("*e")){
+
+            if(displayText == "e"){
+                displayText = "2.718281828490"
+                display.value = displayText
+                
+            }
+
+            else{
+                displayText = displayText.replace("*e","*2.718281828490")
+                displayText = displayText.replace("e","*2.718281828490")
+            
+                displayText = eval(displayText)
+                display.value = displayText
+
+            }
+        }
+        
+
+        
+    }
+
     
     
-}    )
+    )
 
    
     

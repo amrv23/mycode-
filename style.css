@@ -9,7 +9,7 @@ body {
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: rgb(161, 156, 156);
+    background-color: rgb(72, 67, 91);
 
 }
 
@@ -17,7 +17,7 @@ body {
 .CalC {
 
     
-    height: 90vh;
+    height: 92vh;
     width: 60vh;
 
     display: flex;
@@ -35,8 +35,8 @@ button {
    
     cursor: pointer;
     box-sizing: border-box;
-    margin: 2.5vh;
-    border-radius: 10vh;
+    margin: 1.75vh;
+    border-radius: 9vh;
     height: 10vh;
     width: 10vh;
     font-size: 25px;
@@ -67,7 +67,7 @@ button {
     
 }
 
-#percentage {
+.evaluater {
     background-color:chocolate;
 
 }
@@ -79,13 +79,13 @@ button {
 }
 
 .options {
-    color: black;
+    color: whitesmoke;
     background-color:   rgb(78, 78, 77);
     
 }
 
 #zero {
-    width: 25vh;
+    width: 22vh;
 
 }
 
@@ -93,7 +93,8 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-color: rgb(37, 36, 36);
+    color: antiquewhite;
     border-radius: 2vh;
     font-size: 25px;
     padding: 10px;
